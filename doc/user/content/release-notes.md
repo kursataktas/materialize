@@ -29,7 +29,7 @@ as necessary to address severe bugs and security vulnerabilities.
 
 {{% version-header v0.26.6 %}}
 
-- Correctly decode negative timestamps in Avro-formatted sources=
+- Correctly decode negative timestamps in Avro-formatted sources
   {{% gh 16609 %}}.
 
 {{% version-header v0.26.5 %}}
