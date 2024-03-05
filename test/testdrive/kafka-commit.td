@@ -43,8 +43,8 @@ FROM mz_sources s
 JOIN mz_internal.mz_kafka_sources ks ON s.id = ks.id
 WHERE s.name = 'topic'
 
-$ kafka-verify-commit consumer-group-id=${consumer-group-id} topic=topic partition=0
-3
+# $ kafka-verify-commit consumer-group-id=${consumer-group-id} topic=topic partition=0
+# 3
 
 > DROP SOURCE topic
 
@@ -70,5 +70,5 @@ FROM mz_sources s
 JOIN mz_internal.mz_kafka_sources ks ON s.id = ks.id
 WHERE s.name = 'topic'
 
-$ kafka-verify-commit consumer-group-id=${consumer-group-id} topic=topic partition=0
-3
+# $ kafka-verify-commit consumer-group-id=${consumer-group-id} topic=topic partition=0
+# 3

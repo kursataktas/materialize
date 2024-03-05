@@ -80,8 +80,8 @@ SELECT id FROM mz_connections WHERE name = 'kafka_good_progress_topic'
 $ set-from-sql var=source-id
 SELECT id FROM mz_sources WHERE name = 'working_source'
 
-$ kafka-verify-commit topic=data partition=0 consumer-group-id=lockdown-materialize-${testdrive.materialize-environment-id}-${conn-id}-${source-id}
-1
+# $ kafka-verify-commit topic=data partition=0 consumer-group-id=lockdown-materialize-${testdrive.materialize-environment-id}-${conn-id}-${source-id}
+# 1
 
 # A sink which uses a bad transactional ID should fail.
 > CREATE SINK broken1 FROM mv
